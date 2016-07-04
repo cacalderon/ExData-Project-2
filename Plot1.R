@@ -15,6 +15,6 @@ SCC <- readRDS("./Source_Classification_Code.rds")
 
 aggregatedTotalByYear <- aggregate(Emissions ~ year, NEI, sum)
 
-png('plot1.png')
+png('Plot1.png')
 barplot(col=c("red"), height=aggregatedTotalByYear$Emissions, names.arg=aggregatedTotalByYear$year, xlab="Years", ylab=expression('total PM'[2.5]*' emission'),main=expression('Total PM'[2.5]*' emissions per Year'))
 dev.off()
